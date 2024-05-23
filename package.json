@@ -2,11 +2,12 @@
   "name": "books-website",
   "version": "1.0.0",
   "description": "",
-  "main": "server.ts",
+  "main": "index.ts",
   "scripts": {
     "build": "tsc",
-    "start": "node server.js",
-    "devStart": "nodemon server.ts"
+    "start": "ts-node index.ts",
+    "devStart": "nodemon server.ts",
+    "vercel-build": "echo hello"
   },
   "keywords": [],
   "author": "",
