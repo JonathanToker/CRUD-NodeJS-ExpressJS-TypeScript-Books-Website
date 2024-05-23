@@ -17,7 +17,7 @@ if (process.env.DATABASE_URL) {
 }
 const db = mongoose.connection;
 db.on("error", (error) => console.error(error));
-db.once("open", () => console.log("Connected to Mongoose"));
+db.once("open", (error) => console.log(error, "Failed to connect to Mongoose"));
 app.use(expressEjsLayouts);
 app.use(express.static("public"));
 app.use("/", router);
