@@ -2,10 +2,8 @@
   "name": "books-website",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
-  "type": "commonjs",
+  "main": "index.js",
   "scripts": {
-    "build": "tsc",
     "start": "ts-node index.ts",
     "devStart": "nodemon index.ts"
   },
