@@ -6,7 +6,8 @@
   "scripts": {
     "start": "ts-node index.ts",
     "devStart": "nodemon index.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "next-build": "echo hello"
   },
   "keywords": [],
   "author": "",
