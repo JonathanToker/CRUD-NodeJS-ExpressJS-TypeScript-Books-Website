@@ -4,11 +4,12 @@ import router from "./routes";
 import authorRouter from "./routes/authors";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+
 dotenv.config();
 const app = express();
 app.set("view engine", "ejs");
-app.set("views", "/views");
-app.set("layout", "layouts/layout");
+app.set("views", "./views");
+app.set("layout", "./layouts/layout");
 if (process.env.DATABASE_URL) {
   mongoose.connect(process.env.DATABASE_URL);
 } else {
