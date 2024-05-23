@@ -8,8 +8,8 @@ import dotenv from "dotenv";
 dotenv.config();
 const app = express();
 app.set("view engine", "ejs");
-app.set("views", "./views");
-app.set("layout", "./layouts/layout");
+app.set("views", "views");
+app.set("layout", "layouts/layout");
 if (process.env.DATABASE_URL) {
   mongoose.connect(process.env.DATABASE_URL);
 } else {
@@ -22,5 +22,8 @@ app.use(expressEjsLayouts);
 app.use(express.static("public"));
 app.use("/", router);
 app.use("/authors", authorRouter);
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 app.listen(process.env.PORT || 3000);
 export default app;
